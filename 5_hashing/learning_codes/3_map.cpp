@@ -2,6 +2,7 @@
 using namespace std;
 
 #include<unordered_map>
+#include<map>
 
 int main()
 {
@@ -16,10 +17,19 @@ int main()
     }
 
     // prestore 
-    unordered_map <int,int> umap;
+    // unordered_map <int,int> map;
+    map <int,int> map;
     for(int i=0;i<n;i++)
     {
-        umap[arr[i]]++;
+        map[arr[i]]++;
+    }
+
+    // cout << "unordered map elems : \n";
+    cout << "ordered map elems : \n";
+    
+    for(auto it:map)
+    {
+        cout << it.first << " & " << it.second << endl;
     }
 
     int q;
@@ -29,7 +39,7 @@ int main()
     {
         int elem;
         cin>> elem;
-        cout << elem << " appeared " << umap[elem] << " times\n";
+        cout << elem << " appeared " << map[elem] << " times\n";
     }
     return 0;
 }
