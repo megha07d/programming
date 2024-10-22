@@ -8,27 +8,28 @@ int main()
     cin >> st;
 
     // precompute
-    int hashh[26] = {0};
+    int hashh[256] = {0};
 
-    cout << hashh[4] << endl;
+    cout << hashh[89] << endl;
     int n = st.size();
     for (int i = 0; i < n; i++)
     {
         char c = st[i];
-        hashh[c-'a'] += 1;
+        hashh[c] += 1;
     }
 
-    // // input num of queries
-    // int q;
-    // cin >> q;
-    // while (q--)
-    // {
-    //     // input each query
-    //     char ch;
-    //     cin >> ch;
+    // input num of queries
+    int q;
+    cin >> q;
+    while (q--)
+    {
+        // input each query
+        char ch;
+        cin >> ch;
 
-    //     // fetch
-    //     cout << ch << " appears => " << hashh[ch] << " times\n";
-    // }
+        // fetch
+        cout << " Index = " << int(ch) << endl;
+        cout << ch << " appears => " << hashh[ch] << " times\n";
+    }
     return 0;
 }
