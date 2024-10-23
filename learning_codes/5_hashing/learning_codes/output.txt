@@ -1,0 +1,8 @@
+ordered map elems : 
+2 & 1
+3 & 2
+4 & 1
+5 & 1
+101 appeared 0 times
+3 appeared 2 times
+4 appeared 1 times
